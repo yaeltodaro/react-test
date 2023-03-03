@@ -10,7 +10,7 @@ import { Routes ,Route, Navigate } from 'react-router-dom';
 
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/react-test/">
      <Routes>
        <Route path='/' element={<App/>} />
        <Route path="/platillos" element={<Dishes/>} />
