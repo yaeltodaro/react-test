@@ -3,6 +3,9 @@
 .App, .paises, .listado {
   text-align: center;
 }
+li {
+  text-align: initial;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

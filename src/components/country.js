@@ -10,6 +10,7 @@ export class Country extends Component {
   render() {
     return (
       <li>
+        
         <IconButton size="small" onClick={() => this.delete(this.props.name)}>
           <Delete />
         </IconButton>
