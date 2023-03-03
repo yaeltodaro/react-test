@@ -76,9 +76,9 @@ class App extends Component {
         
 
         <Dishes data={this.state.dishes} updateDish={this.updateDish} />
-        <Button variant="contained" color="secondary" onClick={this.showDishes}>
+    {/*     <Button variant="contained" color="secondary" onClick={this.showDishes}>
           Elegir
-        </Button>
+        </Button> */}
       </div>
     );
   }
