@@ -4,6 +4,7 @@ import NewDish from "./components/newDish";
 import data from "./assets/data/dishes.json";
 import Dishes from "./components/dishes";
 
+
 import "./styles/App.css";
 
 class App extends Component {
@@ -25,25 +26,6 @@ class App extends Component {
     this.props.history.push("/platillos");
   };
 
-  /* addDish = (dishName) => {
-    console.log("Nuevo platillo: " + dishName);
-    // Crear una copia del array de platillos
-    let newState = { ...this.state };
-    // Agregar el nuevo platillo al final del array
-    const newDish = {
-      id: newState.dishes.dishes.length,
-      name: dishName,
-      country: "Argentina",
-      ingredients: ["Semilla", "Palo", "Mate"],
-    };
-    // Actualizar el estado con el nuevo array
-    this.setState({ newState });
-
-    this.setState.dishes.push(newDish)
-  };
- */
-
-
   addDish = (dishName) => {
     console.log("Nuevo platillo: " + dishName);
     // Crear una copia del array de platillos
@@ -59,7 +41,6 @@ class App extends Component {
     this.setState({ dishes: updatedDishes });
   };
 
-  
   updateDish = (index, updatedName) => {
     let newState = { ...this.state };
     newState.dishes[index].name = updatedName;
@@ -72,15 +53,19 @@ class App extends Component {
       <div className="App">
         <Header />
         <NewDish onAddDish={this.addDish} />
-        
 
         <Dishes data={this.state.dishes} updateDish={this.updateDish} />
-    {/*     <Button variant="contained" color="secondary" onClick={this.showDishes}>
+        {/*     <Button variant="contained" color="secondary" onClick={this.showDishes}>
           Elegir
         </Button> */}
+
       </div>
     );
   }
+
+
 }
+
+
 
 export default App;
