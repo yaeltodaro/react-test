@@ -1,6 +1,6 @@
 @import "dish.css";
 
-.App {
+.App, .paises, .listado {
   text-align: center;
 }
 

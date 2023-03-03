@@ -36,12 +36,12 @@ export class Countries extends Component {
 
   render() {
     return (
-      <div>
+      <div className="paises">
         <Button as={Link} to="/" variant="contained" color="primary">
           Volver a la Home
         </Button>
         <h1>Países</h1>
-        <ul>
+        <ul className="listado">
           {this.state.countries.map((country, index) => (
             <Country
               key={index}
