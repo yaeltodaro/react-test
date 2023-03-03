@@ -4,7 +4,6 @@ import NewDish from "./components/newDish";
 import data from "./assets/data/dishes.json";
 import Dishes from "./components/dishes";
 
-
 import "./styles/App.css";
 
 class App extends Component {

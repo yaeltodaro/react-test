@@ -1,37 +1,35 @@
 import React, { Component } from "react";
 import { Button } from "@mui/material";
 import { Country } from "./country";
+import { Link } from "react-router-dom";
 
 export class Countries extends Component {
   constructor() {
     super();
     this.state = {
-      countries: []
+      countries: [],
     };
   }
 
   // Carga Automatico los datos
 
-/*   componentDidMount() {
+  /*   componentDidMount() {
     this.getCountries();
   } */
 
-
-
   getCountries = () => {
     fetch("https://restcountries.com/v3.1/all")
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         this.setState({ countries: data });
       })
-      .catch(error => console.log(error));
-  }
+      .catch((error) => console.log(error));
+  };
 
-
-  delete = name => {
+  delete = (name) => {
     let newState = { ...this.state };
     newState.countries = newState.countries.filter(
-      country => country.name.common !== name // o country.name.official
+      (country) => country.name.common !== name // o country.name.official
     );
     this.setState(newState);
   };
@@ -39,10 +37,17 @@ export class Countries extends Component {
   render() {
     return (
       <div>
+        <Button as={Link} to="/" variant="contained" color="primary">
+          Volver a la Home
+        </Button>
         <h1>Países</h1>
         <ul>
           {this.state.countries.map((country, index) => (
-             <Country key={index} name={country.name.common} onDelete={this.delete} />
+            <Country
+              key={index}
+              name={country.name.common}
+              onDelete={this.delete}
+            />
             // <Country key={index} name={country.name.official} onDelete={this.delete} />
           ))}
         </ul>
