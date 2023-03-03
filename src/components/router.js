@@ -15,7 +15,7 @@ const Router = () => (
        <Route path='/' element={<App/>} />
        <Route path="/platillos" element={<Dishes/>} />
        <Route path="/platillo/:name" element={<Dish/>} />
-       <Route path="/paises" element={<Countries/>} />
+       <Route path="/react-test/paises" element={<Countries/>} />
        <Route path="*" element={<Navigate to="/" />} />
        <Route component={NotFound} />
      </Routes>
